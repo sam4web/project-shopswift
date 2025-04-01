@@ -100,7 +100,7 @@ _Product listing page displaying available items._
 
 ## Project Links
 
-- **Live Application**: [ShopSwift Live]()
-- **Backend Code**: [Backend Repository]()
-- **Frontend Code**: [Frontend Repository]()
-- **Live API**: [ShopSwift API]()
+- **Live Application**: [ShopSwift Live](https://projectshopswift.netlify.app/)
+- **Live API**: [ShopSwift API](https://shopswift-a9hj.onrender.com)
+- **Frontend Code**: [Frontend Repository](https://github.com/sam4web/shopswift/tree/main/frontend)
+- **Backend Code**: [Backend Repository](https://github.com/sam4web/shopswift/tree/main/backend)
