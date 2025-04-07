@@ -1,4 +1,4 @@
-# ShopSwift
+# Project ShopSwift
 
 ShopSwift is a modern e-commerce platform featuring a responsive frontend and a powerful backend. Built using the **MERN Stack**, ShopSwift provides a seamless shopping experience with user authentication, product browsing, shopping cart functionality, and order management.
 
