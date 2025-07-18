@@ -10,12 +10,25 @@ export const fetchProductsQuery = createAsyncThunk("product/fetchProducts", asyn
   }
 });
 
-export const createProductEntry = createAsyncThunk("product/createProduct",
+export const fetchSingleProductQuery = createAsyncThunk(
+  "product/fetchSingleProduct",
+  async (productId, { rejectWithValue }) => {
+    try {
+      const response = await api.get(`/api/products/${productId}`);
+      return response.data;
+    } catch (err) {
+      return rejectWithValue(err.response?.data?.message || err.message);
+    }
+  }
+);
+
+export const createProductEntry = createAsyncThunk(
+  "product/createProduct",
   async (product, { rejectWithValue, getState }) => {
     try {
       const response = await api.post("/api/products", product, {
         headers: {
-          "Authorization": `Bearer ${getState().auth.token}`,
+          Authorization: `Bearer ${getState().auth.token}`,
           "Content-Type": "application/x-www-form-urlencoded",
         },
       });
@@ -23,28 +36,32 @@ export const createProductEntry = createAsyncThunk("product/createProduct",
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || err.message);
     }
-  });
-
-export const deleteProductRequest = createAsyncThunk("product/deleteProduct", async (
-  productId, { rejectWithValue, getState }) => {
-  try {
-    await api.delete(`/api/products/${productId}`, {
-      headers: {
-        "Authorization": `Bearer ${getState().auth.token}`,
-      },
-    });
-    return productId;
-  } catch (err) {
-    return rejectWithValue(err.response?.data?.message || err.message);
   }
-});
+);
 
-export const updateProductRecord = createAsyncThunk("product/updateProduct",
+export const deleteProductRequest = createAsyncThunk(
+  "product/deleteProduct",
+  async (productId, { rejectWithValue, getState }) => {
+    try {
+      await api.delete(`/api/products/${productId}`, {
+        headers: {
+          Authorization: `Bearer ${getState().auth.token}`,
+        },
+      });
+      return productId;
+    } catch (err) {
+      return rejectWithValue(err.response?.data?.message || err.message);
+    }
+  }
+);
+
+export const updateProductRecord = createAsyncThunk(
+  "product/updateProduct",
   async (product, { rejectWithValue, getState }) => {
     try {
       const response = await api.patch(`/api/products/${product.id}`, product.data, {
         headers: {
-          "Authorization": `Bearer ${getState().auth.token}`,
+          Authorization: `Bearer ${getState().auth.token}`,
           "Content-Type": "application/x-www-form-urlencoded",
         },
       });
@@ -52,4 +69,5 @@ export const updateProductRecord = createAsyncThunk("product/updateProduct",
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || err.message);
     }
-  });
+  }
+);
