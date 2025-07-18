@@ -41,7 +41,7 @@ const ProductDetail = () => {
     fetchSingleProduct();
   }, [dispatch]);
 
-  useTitle(`${product?.name || "Not found"} | ShopSwift`);
+  useTitle(`${product?.name || "Loading..."} | ShopSwift`);
 
   if (loading)
     return (
