@@ -1,10 +1,10 @@
 # Project ShopSwift
 
-ShopSwift is a modern e-commerce platform featuring a responsive frontend and a powerful backend. Built using the **MERN Stack**, ShopSwift provides a seamless shopping experience with user authentication, product browsing, shopping cart functionality, and order management.
+ShopSwift is an e-commerce platform developed as a **practice project** to demonstrate my skills in full-stack web development. Built using the **MERN Stack**, it features a responsive frontend and a powerful backend. ShopSwift showcases key e-commerce functionalities, including **user authentication**, **product browsing**, a functional **shopping cart**, and a system for **order management**.
 
 ## Table of Contents
 
-- [ShopSwift](#shopswift)
+- [Project ShopSwift](#project-shopswift)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
     - [Frontend](#frontend)
@@ -100,7 +100,7 @@ _Product listing page displaying available items._
 
 ## Project Links
 
-- **Live Application**: [ShopSwift Live](https://projectshopswift.netlify.app/)
-- **Live API**: [ShopSwift API](https://shopswift-a9hj.onrender.com)
 - **Frontend Code**: [Frontend Repository](https://github.com/sam4web/shopswift/tree/main/frontend)
 - **Backend Code**: [Backend Repository](https://github.com/sam4web/shopswift/tree/main/backend)
+- **Live Application**: [ShopSwift Live](https://projectshopswift.netlify.app/)
+- **Live API**: [ShopSwift API](https://shopswift-a9hj.onrender.com)
